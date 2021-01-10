@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+</head>
+<style>
+    main{
+         max-width: 960px;
+         margin: 3em/ auto;
+         padding: 2em; 
+         
+     }
+    .calendar{
+        grid-template-areas:
+        "clock clock"
+        "title title"
+        "name name"
+        "day day";
+
+    }
+    .title{
+
+        grid-area:title; 
+        display:grid;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+
+    }
+
+    .clock{
+        grid-area:clock;
+        display:grid;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+
+    .name{
+        grid-area:name;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        text-align: center;
+        background-color: rgb(97, 109, 105);
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    }
+    .day{
+        grid-area:day;
+        display:grid;
+        grid-template-columns: repeat(7,1fr);
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+        font-weight: bolder;
+        background-color: rgb(75, 78, 77); 
+        
+    }
+    .firstday{
+
+        display:grid; 
+        grid-column-start: 5;
+    }
+
+    .button:hover{
+
+    color:red;
+
+     }
+
+     .firstday:hover{
+
+         color:red;
+     }
+
+     
+     
+
+</style>
+<main>
+<body>
+     
+    <div class="calendar">
+        <h1 class="clock">10:00:00</h1>
+        <h2 class="title">enero de 2021</h2>
+    
+
+    <div class="name">
+        <div>Lunes</div>
+        <div>Martes</div>
+        <div>Miércoles</div>
+        <div>Jueves</div>
+        <div>Viernes</div>
+        <div>Sábado</div>
+        <div>Domingo</div>
+    </div>
+    <div class="day"> 
+        <div class="firstday">1</div>
+        <div class="button">2</div>
+        <div class="button">3</div>
+        <div class="button">4</div>
+        <div class="button">5</div>
+        <div class="button">6</div>
+        <div class="button">7</div>
+        <div class="button">8</div>
+        <div class="button">9</div>
+        <div class="button">10</div>
+        <div class="button">11</div>
+        <div class="button">12</div>
+        <div class="button">13</div>
+        <div class="button">14</div>
+        <div class="button">15</div>
+        <div class="button">16</div>
+        <div class="button">17</div>
+        <div class="button">18</div>
+        <div class="button">19</div>
+        <div class="button">20</div>
+        <div class="button">21</div>
+        <div class="button">22</div>
+        <div class="button">23</div>
+        <div class="button">24</div>
+        <div class="button">25</div>
+        <div class="button">26</div>
+        <div class="button">27</div>
+        <div class="button">28</div>
+        <div class="button">29</div>
+        <div class="button">30</div>
+        <div class="button">31</div>
+
+    </div>
+</div>
+</body>
+</main>
+</html>
