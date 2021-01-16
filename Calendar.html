@@ -7,24 +7,26 @@
 </head>
 <style>
     main{
-         max-width: 960px;
-         margin: 3em/ auto;
-         padding: 2em; 
+        display: grid;
+         max-width: 540px;
+         margin-left: auto;
+         margin-right: auto;
          
-     }
+         }
+
     .calendar{
         grid-template-areas:
         "clock clock"
         "title title"
-        "name name"
-        "day day";
+        "day-name day-name"
+        "day-number day-number";
+         }
 
-    }
     .title{
 
         grid-area:title; 
         display:grid;
-        text-align: center;
+        text-align: left;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         
 
@@ -33,13 +35,13 @@
     .clock{
         grid-area:clock;
         display:grid;
-        text-align: center;
+        text-align: left;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+        
     }
 
-    .name{
-        grid-area:name;
+    .day-name{
+        grid-area:day-name;
         display: grid;
         grid-template-columns: repeat(7,1fr);
         text-align: center;
@@ -48,8 +50,8 @@
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
     }
-    .day{
-        grid-area:day;
+    .day-number{
+        grid-area:day-number;
         display:grid;
         grid-template-columns: repeat(7,1fr);
         text-align: center;
@@ -64,39 +66,49 @@
         grid-column-start: 5;
     }
 
-    .button:hover{
+    .om{
+        display:grid;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight:lighter;
 
-    color:red;
+    }
 
+
+     .firstday:hover, .button:hover{
+
+         color:white;
      }
+    
+      
 
-     .firstday:hover{
-
-         color:red;
-     }
-
-     
+    
      
 
 </style>
 <main>
 <body>
-     
-    <div class="calendar">
-        <h1 class="clock">10:00:00</h1>
-        <h2 class="title">enero de 2021</h2>
     
+    <div class="calendar">
+        <h3 class="clock">10:00:00</h3>
+        <h4 class="title">enero de 2021</h4>
 
-    <div class="name">
-        <div>Lunes</div>
-        <div>Martes</div>
-        <div>Miércoles</div>
-        <div>Jueves</div>
-        <div>Viernes</div>
-        <div>Sábado</div>
-        <div>Domingo</div>
+
+
+    <div class="day-name">
+        <div>L</div>
+        <div>M</div>
+        <div>X</div>
+        <div>J</div>
+        <div>V</div>
+        <div>S</div>
+        <div>D</div>
     </div>
-    <div class="day"> 
+    
+    <div class="day-number"> 
+        <div class="om">28</div>
+        <div class="om">29</div>
+        <div class="om">30</div>
+        <div class="om">31</div>
         <div class="firstday">1</div>
         <div class="button">2</div>
         <div class="button">3</div>
